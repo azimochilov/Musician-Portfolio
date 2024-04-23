@@ -2,11 +2,9 @@ package Musician.Portfolio.Musician.Portfolio.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;import lombok.RequiredArgsConstructor;
-import org.modelmapper.ModelMapper;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.modelmapper.ModelMapper;
+
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.security.SecurityRequirement;

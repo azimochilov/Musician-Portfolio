@@ -4,23 +4,21 @@ server:
 spring:
 
   file:
-    upload-dir: 'C:\\Users\\azimo\\OneDrive\\uploads'
-
+    upload-dir: '/home/ec2-user/uploads'
 
   servlet:
     multipart:
       max-file-size: 128MB
       max-request-size: 128MB
 
-
   flyway:
     enabled: true
     baseline-on-migrate: true
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/musics
+    url: jdbc:postgresql://host.docker.internal:5433/postgres
     username: postgres
-    password: Yaironman@.26
+    password: postgres
 
 
   jpa:

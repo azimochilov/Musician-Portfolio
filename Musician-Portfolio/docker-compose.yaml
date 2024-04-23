@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  postgres:
+    container_name: postgres_container2
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5433:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+  pgadmin:
+    container_name: pgadmin_container2
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@mymail.ru
+      PGADMIN_DEFAULT_PASSWORD: admin
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - "90:80"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+  music:
+    container_name: music
+    build: .
+    depends_on:
+      - pgadmin
+      - postgres
+    ports:
+      - "8080:8081"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+networks:
+  postgres:
+    driver: bridge
+
+volumes:
+  postgres:
+  pgadmin:
