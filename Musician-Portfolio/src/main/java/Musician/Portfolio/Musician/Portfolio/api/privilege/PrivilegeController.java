@@ -12,7 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/privilege")
 //@PreAuthorize("hasAuthority('ROLE_PRIVILEGE_SERVICE')")
-@CrossOrigin("http://54.174.103.74:8080")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class PrivilegeController {
     private final PrivilegeService privilegeService;
 

@@ -22,7 +22,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/photos")
-@CrossOrigin("http://54.174.103.74:8080")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class PhotoController {
 
     private final PhotoService photoService;

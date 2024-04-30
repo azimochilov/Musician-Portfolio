@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RestController
 @RequestMapping("/login")
-@CrossOrigin("http://54.174.103.74:8080")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequiredArgsConstructor
 public class AuthController {
     private final LoginManagerService loginManagerService;

@@ -34,7 +34,7 @@ import java.util.zip.ZipOutputStream;
 
 @RestController
 @RequestMapping("/api/music")
-@CrossOrigin("http://54.174.103.74:8080")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class MusicController {
 
     private final MusicService musicService;

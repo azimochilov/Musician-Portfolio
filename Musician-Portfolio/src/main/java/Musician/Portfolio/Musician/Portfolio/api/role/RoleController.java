@@ -18,7 +18,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/role")
 @PreAuthorize("hasAuthority('ROLE_PRIVILEGE_SERVICE')")
-@CrossOrigin("http://54.174.103.74:8080")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class RoleController {
     private final RoleService roleService;
 
