@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/contacts")
+@CrossOrigin("http://54.174.103.74:8080")
 public class ContactController {
 
     private final ContactService contactService;
