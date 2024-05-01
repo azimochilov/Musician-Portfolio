@@ -22,4 +22,10 @@ public class TestController {
         Contact newContact = contactService.saveContact(contact);
         return ResponseEntity.ok(newContact);
     }
+
+    @GetMapping("/")
+    public ResponseEntity<String> add() {
+
+        return ResponseEntity.ok("Done");
+    }
 }
